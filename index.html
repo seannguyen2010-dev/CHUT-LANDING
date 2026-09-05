@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chút Healthy Juice | Nước ép nguyên chất – Không đường – Không chất bảo quản</title>
+  <meta name="description" content="Chút Healthy Juice – Nước ép nguyên chất từ rau củ quả tươi sạch, ép chậm giữ trọn dưỡng chất. Giao hàng tận nơi tại Quy Nhơn. Hotline 0978 068 449" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #2d6a4f;
+      --primary-dark: #1b4332;
+      --primary-light: #40916c;
+      --accent: #95d5b2;
+      --cream: #f8f5f0;
+      --gold: #d4a373;
+      --text: #1a1a1a;
+      --muted: #6c757d;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      color: var(--text);
+      background: #fff;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4, .font-serif {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* ========== NAVBAR ========== */
+    .navbar {
+      background: transparent;
+      transition: all 0.4s ease;
+      padding: 1rem 0;
+    }
+    .navbar.scrolled {
+      background: rgba(27, 67, 50, 0.97);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 30px rgba(0,0,0,0.15);
+      padding: 0.6rem 0;
+    }
+    .navbar-brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      color: #fff !important;
+      letter-spacing: 1px;
+    }
+    .navbar-brand span { color: var(--accent); }
+    .nav-link {
+      color: rgba(255,255,255,0.9) !important;
+      font-weight: 500;
+      font-size: 0.95rem;
+      margin: 0 0.4rem;
+      position: relative;
+      transition: color 0.3s;
+    }
+    .nav-link:hover, .nav-link.active { color: var(--accent) !important; }
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.3s;
+    }
+    .nav-link:hover::after { width: 100%; }
+    .btn-order {
+      background: var(--accent);
+      color: var(--primary-dark) !important;
+      font-weight: 600;
+      border-radius: 50px;
+      padding: 0.5rem 1.4rem;
+      border: none;
+      transition: all 0.3s;
+    }
+    .btn-order:hover {
+      background: #fff;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #1b4332 0%, #2d6a4f 50%, #40916c 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      color: #fff;
+    }
+    .hero-bg-pattern {
+      position: absolute;
+      inset: 0;
+      background-image: 
+        radial-gradient(circle at 20% 80%, rgba(149, 213, 178, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(212, 163, 115, 0.12) 0%, transparent 40%);
+      pointer-events: none;
+    }
+    .hero-content { position: relative; z-index: 2; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+    .hero h1 {
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 1.2rem;
+    }
+    .hero h1 .highlight {
+      color: var(--accent);
+      position: relative;
+    }
+    .hero-sub {
+      font-size: 1.15rem;
+      opacity: 0.9;
+      max-width: 520px;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+    .hero-btns .btn {
+      border-radius: 50px;
+      padding: 0.85rem 1.8rem;
+      font-weight: 600;
+      font-size: 1rem;
+      transition: all 0.3s;
+    }
+    .btn-primary-hero {
+      background: var(--accent);
+      color: var(--primary-dark);
+      border: none;
+    }
+    .btn-primary-hero:hover {
+      background: #fff;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    .btn-outline-hero {
+      background: transparent;
+      border: 2px solid rgba(255,255,255,0.6);
+      color: #fff;
+    }
+    .btn-outline-hero:hover {
+      background: rgba(255,255,255,0.15);
+      border-color: #fff;
+      color: #fff;
+    }
+
+    /* Floating bottles animation */
+    .hero-visual {
+      position: relative;
+      height: 520px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .bottle-float {
+      position: absolute;
+      border-radius: 20px;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
+      object-fit: cover;
+    }
+    .bottle-1 {
+      width: 180px;
+      height: 320px;
+      z-index: 3;
+      animation: float1 6s ease-in-out infinite;
+    }
+    .bottle-2 {
+      width: 140px;
+      height: 250px;
+      left: 10%;
+      top: 15%;
+      z-index: 2;
+      animation: float2 7s ease-in-out infinite;
+      opacity: 0.95;
+    }
+    .bottle-3 {
+      width: 140px;
+      height: 250px;
+      right: 8%;
+      bottom: 10%;
+      z-index: 2;
+      animation: float3 8s ease-in-out infinite;
+      opacity: 0.95;
+    }
+    @keyframes float1 {
+      0%, 100% { transform: translateY(0) rotate(-2deg); }
+      50% { transform: translateY(-25px) rotate(2deg); }
+    }
+    @keyframes float2 {
+      0%, 100% { transform: translateY(0) rotate(3deg); }
+      50% { transform: translateY(-18px) rotate(-3deg); }
+    }
+    @keyframes float3 {
+      0%, 100% { transform: translateY(0) rotate(-4deg); }
+      50% { transform: translateY(-22px) rotate(3deg); }
+    }
+    .hero-particles span {
+      position: absolute;
+      width: 8px;
+      height: 8px;
+      background: var(--accent);
+      border-radius: 50%;
+      opacity: 0.4;
+      animation: particle 12s linear infinite;
+    }
+    @keyframes particle {
+      0% { transform: translateY(100vh) scale(0); opacity: 0; }
+      10% { opacity: 0.5; }
+      90% { opacity: 0.3; }
+      100% { transform: translateY(-100px) scale(1); opacity: 0; }
+    }
+
+    /* ========== FEATURES STRIP ========== */
+    .features-strip {
+      background: var(--cream);
+      padding: 3rem 0;
+      margin-top: -40px;
+      position: relative;
+      z-index: 5;
+      border-radius: 40px 40px 0 0;
+    }
+    .feature-item {
+      text-align: center;
+      padding: 1.5rem 1rem;
+    }
+    .feature-icon {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin: 0 auto 1rem;
+      box-shadow: 0 10px 25px rgba(45, 106, 79, 0.25);
+    }
+    .feature-item h5 {
+      font-weight: 600;
+      font-size: 1.05rem;
+      margin-bottom: 0.4rem;
+    }
+    .feature-item p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    /* ========== ABOUT ========== */
+    .section-padding { padding: 5.5rem 0; }
+    .section-title {
+      font-size: clamp(2rem, 4vw, 2.8rem);
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 1rem;
+    }
+    .section-subtitle {
+      color: var(--muted);
+      max-width: 600px;
+      margin: 0 auto 3rem;
+      font-size: 1.05rem;
+    }
+    .about-img {
+      border-radius: 24px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.12);
+      width: 100%;
+      object-fit: cover;
+    }
+    .about-badge {
+      background: var(--primary);
+      color: #fff;
+      padding: 1.2rem 1.5rem;
+      border-radius: 16px;
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    }
+    .about-badge h3 { font-size: 2rem; margin: 0; font-weight: 700; }
+    .about-badge span { font-size: 0.85rem; opacity: 0.9; }
+    .check-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+    }
+    .check-list i {
+      color: var(--primary);
+      font-size: 1.2rem;
+      margin-top: 3px;
+    }
+
+    /* ========== PRODUCTS ========== */
+    .products-section { background: #fafafa; }
+    .product-card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      height: 100%;
+      border: 1px solid rgba(0,0,0,0.04);
+    }
+    .product-card:hover {
+      transform: translateY(-12px);
+      box-shadow: 0 25px 50px rgba(45, 106, 79, 0.15);
+    }
+    .product-img-wrap {
+      height: 260px;
+      overflow: hidden;
+      position: relative;
+    }
+    .product-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s;
+    }
+    .product-card:hover .product-img-wrap img { transform: scale(1.08); }
+    .product-body { padding: 1.5rem; }
+    .product-body h5 {
+      font-weight: 600;
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-dark);
+    }
+    .product-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 0.8rem;
+    }
+    .product-tag {
+      background: rgba(45, 106, 79, 0.08);
+      color: var(--primary);
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.25rem 0.7rem;
+      border-radius: 50px;
+    }
+
+    /* ========== DETOX ========== */
+    .detox-card {
+      background: #fff;
+      border-radius: 24px;
+      padding: 2.5rem 2rem;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+      height: 100%;
+      border: 2px solid transparent;
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+    .detox-card.popular {
+      border-color: var(--primary);
+      transform: scale(1.03);
+    }
+    .detox-card.popular::before {
+      content: 'Phổ biến';
+      position: absolute;
+      top: 18px;
+      right: -30px;
+      background: var(--primary);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 40px;
+      transform: rotate(45deg);
+    }
+    .detox-price {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      font-family: 'Playfair Display', serif;
+    }
+    .detox-price small { font-size: 1rem; font-weight: 500; color: var(--muted); }
+    .detox-list { list-style: none; padding: 0; margin: 1.5rem 0; }
+    .detox-list li {
+      padding: 0.5rem 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+    }
+    .detox-list i { color: var(--primary-light); }
+
+    /* ========== GALLERY ========== */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 220px;
+      gap: 16px;
+    }
+    .gallery-item {
+      border-radius: 16px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+    .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+    .gallery-item:nth-child(6) { grid-column: span 2; }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+    .gallery-item:hover img { transform: scale(1.1); }
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(27,67,50,0.7), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+      display: flex;
+      align-items: flex-end;
+      padding: 1.2rem;
+      color: #fff;
+    }
+    .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+    /* ========== BENEFITS ========== */
+    .benefit-box {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      border-radius: 20px;
+      background: #fff;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+      height: 100%;
+      transition: all 0.3s;
+    }
+    .benefit-box:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(45, 106, 79, 0.12);
+    }
+    .benefit-icon {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #d8f3dc, #95d5b2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: var(--primary-dark);
+      margin: 0 auto 1.2rem;
+    }
+
+    /* ========== CTA ========== */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(149,213,178,0.2) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .cta-phone {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    /* ========== CONTACT ========== */
+    .contact-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+      height: 100%;
+    }
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(45, 106, 79, 0.1);
+      color: var(--primary);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+    .form-control, .form-select {
+      border-radius: 12px;
+      padding: 0.85rem 1.1rem;
+      border: 1.5px solid #e9ecef;
+      font-size: 0.95rem;
+    }
+    .form-control:focus, .form-select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(45, 106, 79, 0.15);
+    }
+    .btn-submit {
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 0.9rem 2rem;
+      font-weight: 600;
+      width: 100%;
+      transition: all 0.3s;
+    }
+    .btn-submit:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(45, 106, 79, 0.3);
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: var(--primary-dark);
+      color: rgba(255,255,255,0.85);
+      padding: 4rem 0 2rem;
+    }
+    footer h5 {
+      color: #fff;
+      font-weight: 600;
+      margin-bottom: 1.2rem;
+      font-size: 1.1rem;
+    }
+    footer a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    footer a:hover { color: var(--accent); }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      font-size: 0.9rem;
+    }
+    .social-links a {
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 8px;
+      transition: all 0.3s;
+    }
+    .social-links a:hover {
+      background: var(--accent);
+      color: var(--primary-dark);
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 991px) {
+      .hero-visual { height: 380px; margin-top: 2rem; }
+      .bottle-1 { width: 140px; height: 250px; }
+      .bottle-2, .bottle-3 { width: 110px; height: 190px; }
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 180px;
+      }
+      .gallery-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
+      .detox-card.popular { transform: none; }
+    }
+    @media (max-width: 575px) {
+      .hero { min-height: auto; padding: 8rem 0 4rem; }
+      .features-strip { border-radius: 24px 24px 0 0; }
+      .gallery-grid { grid-template-columns: 1fr; }
+      .gallery-item:nth-child(1), .gallery-item:nth-child(6) { grid-column: span 1; }
+    }
+
+    /* Smooth scroll */
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body>
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand" href="#home">Chút<span>.</span></a>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <i class="fas fa-bars text-white fs-4"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="#home">Trang chủ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">Giới thiệu</a></li>
+          <li class="nav-item"><a class="nav-link" href="#products">Sản phẩm</a></li>
+          <li class="nav-item"><a class="nav-link" href="#detox">Liệu trình</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Thư viện</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Liên hệ</a></li>
+          <li class="nav-item ms-lg-3">
+            <a href="tel:0978068449" class="btn btn-order"><i class="fas fa-phone-alt me-2"></i>0978 068 449</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-particles" id="particles"></div>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 hero-content" data-aos="fade-right" data-aos-duration="1000">
+          <div class="hero-badge">
+            <i class="fas fa-leaf"></i>
+            100% Nguyên chất · Ép chậm · Giao tận nơi
+          </div>
+          <h1>
+            Nước ép <span class="highlight">tươi lành</span><br />
+            cho cơ thể khỏe mỗi ngày
+          </h1>
+          <p class="hero-sub">
+            Chút Healthy Juice – Nước ép nguyên chất từ rau củ quả tươi sạch, không đường, không chất bảo quản. Thanh lọc cơ thể, bừng năng lượng tự nhiên.
+          </p>
+          <div class="hero-btns d-flex flex-wrap gap-3">
+            <a href="#products" class="btn btn-primary-hero">Khám phá sản phẩm</a>
+            <a href="tel:0978068449" class="btn btn-outline-hero"><i class="fas fa-phone me-2"></i>Gọi ngay</a>
+          </div>
+          <div class="d-flex gap-4 mt-4 pt-2">
+            <div>
+              <div class="fw-bold fs-4">100%</div>
+              <small class="opacity-75">Nguyên chất</small>
+            </div>
+            <div>
+              <div class="fw-bold fs-4">0g</div>
+              <small class="opacity-75">Đường thêm</small>
+            </div>
+            <div>
+              <div class="fw-bold fs-4">0</div>
+              <small class="opacity-75">Chất bảo quản</small>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="hero-visual" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+            <img src="images/chut-20.jpg" alt="Chút Healthy Juice" class="bottle-float bottle-1" />
+            <img src="images/chut-16.jpg" alt="Juice bottles" class="bottle-float bottle-2" />
+            <img src="images/chut-12.jpg" alt="Fresh juices" class="bottle-float bottle-3" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FEATURES STRIP ========== -->
+  <section class="features-strip">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="0">
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+            <h5>100% Nguyên chất</h5>
+            <p>Từ rau củ quả tươi sạch</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-snowflake"></i></div>
+            <h5>Ép chậm</h5>
+            <p>Giữ trọn dưỡng chất</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+            <h5>Không chất bảo quản</h5>
+            <p>An toàn cho sức khỏe</p>
+          </div>
+        </div>
+        <div class="col-6 col-md-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fas fa-truck"></i></div>
+            <h5>Giao hàng nhanh</h5>
+            <p>Tận nơi tại Quy Nhơn</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="section-padding" id="about">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="position-relative">
+            <img src="images/chut-19.jpg" alt="Chút Healthy" class="about-img" />
+            <div class="about-badge">
+              <h3>100%</h3>
+              <span>Tự nhiên</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <span class="text-uppercase fw-semibold text-success mb-2 d-block" style="letter-spacing: 2px; font-size: 0.85rem;">Về chúng tôi</span>
+          <h2 class="section-title">Chút tươi lành,<br />Chút yêu thương</h2>
+          <p class="text-muted mb-4" style="line-height: 1.8;">
+            Chút Healthy Juice mang đến những chai nước ép nguyên chất được ép chậm từ rau củ quả tươi mỗi ngày. Không đường thêm, không chất bảo quản, không chất tạo màu – chỉ có vị ngọt tự nhiên và dưỡng chất nguyên vẹn.
+          </p>
+          <ul class="check-list list-unstyled">
+            <li><i class="fas fa-check-circle"></i> <span>Nguyên liệu tươi sạch, chọn lọc kỹ lưỡng mỗi ngày</span></li>
+            <li><i class="fas fa-check-circle"></i> <span>Ép lạnh / ép chậm giữ trọn vitamin & khoáng chất</span></li>
+            <li><i class="fas fa-check-circle"></i> <span>Công thức đa dạng: detox, bổ máu, tăng đề kháng…</span></li>
+            <li><i class="fas fa-check-circle"></i> <span>Có trên ShopeeFood & GrabFood – giao nhanh chóng</span></li>
+          </ul>
+          <a href="#contact" class="btn btn-success btn-lg rounded-pill px-4 mt-3">Tư vấn liệu trình</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRODUCTS ========== -->
+  <section class="section-padding products-section" id="products">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up">
+        <span class="text-uppercase fw-semibold text-success mb-2 d-block" style="letter-spacing: 2px; font-size: 0.85rem;">Menu</span>
+        <h2 class="section-title">Sản phẩm nổi bật</h2>
+        <p class="section-subtitle">Mỗi chai là sự kết hợp hoàn hảo từ rau củ trái cây tươi, ép chậm để giữ lại tối đa vitamin, khoáng chất và hương vị tự nhiên.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/chut-18.jpg" alt="Blood Builder" />
+            </div>
+            <div class="product-body">
+              <h5>Blood Builder</h5>
+              <p class="text-muted small mb-0">Củ dền + Cà rốt + Táo đỏ – Hỗ trợ bổ máu, tăng sức đề kháng</p>
+              <div class="product-tags">
+                <span class="product-tag">Ép chậm</span>
+                <span class="product-tag">330ml</span>
+                <span class="product-tag">Không đường</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/chut-08.jpg" alt="Ginger Shot" />
+            </div>
+            <div class="product-body">
+              <h5>Ginger Shot</h5>
+              <p class="text-muted small mb-0">Gừng tươi nguyên chất – Thanh lọc, hỗ trợ tiêu hóa, tăng miễn dịch</p>
+              <div class="product-tags">
+                <span class="product-tag">Shot</span>
+                <span class="product-tag">100% Tự nhiên</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/chut-05.jpg" alt="Lựu ép" />
+            </div>
+            <div class="product-body">
+              <h5>Lựu Ép</h5>
+              <p class="text-muted small mb-0">Nước lựu tươi ngon – Bổ dưỡng, giàu chất chống oxy hóa</p>
+              <div class="product-tags">
+                <span class="product-tag">Tươi ngon</span>
+                <span class="product-tag">Bổ dưỡng</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="0">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/chut-19.jpg" alt="Dưa lưới" />
+            </div>
+            <div class="product-body">
+              <h5>Dưa Lưới</h5>
+              <p class="text-muted small mb-0">Thanh lọc cơ thể, bừng năng lượng – Vị ngọt tự nhiên dịu nhẹ</p>
+              <div class="product-tags">
+                <span class="product-tag">Thanh lọc</span>
+                <span class="product-tag">Năng lượng</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/chut-14.jpg" alt="Smoothie & Mix" />
+            </div>
+            <div class="product-body">
+              <h5>Smoothie & Mix</h5>
+              <p class="text-muted small mb-0">Các vị smoothie xanh, cam, hồng – Mix rau củ trái cây tươi</p>
+              <div class="product-tags">
+                <span class="product-tag">Đa dạng</span>
+                <span class="product-tag">Dễ uống</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="product-card">
+            <div class="product-img-wrap">
+              <img src="images/chut-13.jpg" alt="Sữa hạnh nhân" />
+            </div>
+            <div class="product-body">
+              <h5>Sữa Hạnh Nhân</h5>
+              <p class="text-muted small mb-0">Vitamin tươi mỗi ngày – Nguyên chất 100%, không đường</p>
+              <div class="product-tags">
+                <span class="product-tag">Plant-based</span>
+                <span class="product-tag">Không đường</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DETOX PROGRAMS ========== -->
+  <section class="section-padding" id="detox">
+    <div class="container">
+      <div class="text-center" data-aos="fade-up">
+        <span class="text-uppercase fw-semibold text-success mb-2 d-block" style="letter-spacing: 2px; font-size: 0.85rem;">Liệu trình</span>
+        <h2 class="section-title">Liệu trình Detox Chút Healthy</h2>
+        <p class="section-subtitle">Uống đủ – đúng – đều. Kết hợp ăn uống lành mạnh và nghỉ ngơi hợp lý để cơ thể khỏe, tâm trí nhẹ.</p>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-5" data-aos="fade-up" data-aos-delay="0">
+          <div class="detox-card">
+            <h4 class="fw-bold mb-1">Gói Nhẹ Nhàng</h4>
+            <p class="text-muted small">1 Smoothie + 2 Detox / ngày</p>
+            <div class="detox-price">105K <small>/ ngày</small></div>
+            <p class="small text-muted mb-0">(≈ 35K / chai)</p>
+            <ul class="detox-list">
+              <li><i class="fas fa-check"></i> Phù hợp người mới bắt đầu</li>
+              <li><i class="fas fa-check"></i> Thanh lọc nhẹ nhàng</li>
+              <li><i class="fas fa-check"></i> Không quá áp lực</li>
+              <li><i class="fas fa-check"></i> Dễ duy trì hàng ngày</li>
+            </ul>
+            <a href="tel:0978068449" class="btn btn-outline-success w-100 rounded-pill">Đặt ngay</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-5" data-aos="fade-up" data-aos-delay="150">
+          <div class="detox-card popular">
+            <h4 class="fw-bold mb-1">Gói Chuyên Sâu</h4>
+            <p class="text-muted small">2 Smoothie + 3 Detox / ngày</p>
+            <div class="detox-price">175K <small>/ ngày</small></div>
+            <p class="small text-muted mb-0">(≈ 35K / chai)</p>
+            <ul class="detox-list">
+              <li><i class="fas fa-check"></i> Thanh lọc sâu hơn</li>
+              <li><i class="fas fa-check"></i> Hỗ trợ giảm mỡ, đẹp da</li>
+              <li><i class="fas fa-check"></i> Nạp lại năng lượng</li>
+              <li><i class="fas fa-check"></i> Giảm 5% gói 10 ngày</li>
+            </ul>
+            <a href="tel:0978068449" class="btn btn-success w-100 rounded-pill">Đặt ngay</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4" data-aos="fade-up">
+        <p class="text-muted small mb-2">Chọn liệu trình: 3 · 5 · 7 · 10 · 14 ngày · Giảm 10% cho 30 khách hàng đầu tiên</p>
+        <p class="fw-medium">Phù hợp cho: Người muốn thanh lọc · Ăn uống không khoa học · Duy trì lối sống lành mạnh</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY ========== -->
+  <section class="section-padding products-section" id="gallery">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <span class="text-uppercase fw-semibold text-success mb-2 d-block" style="letter-spacing: 2px; font-size: 0.85rem;">Gallery</span>
+        <h2 class="section-title">Hình ảnh thương hiệu</h2>
+      </div>
+      <div class="gallery-grid" data-aos="fade-up">
+        <div class="gallery-item">
+          <img src="images/chut-20.jpg" alt="Chút juices" />
+          <div class="gallery-overlay"><span>Bộ sưu tập đầy màu sắc</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/chut-10.jpg" alt="Hands holding juice" />
+          <div class="gallery-overlay"><span>Tươi mỗi ngày</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/chut-15.jpg" alt="Blood Builder ingredients" />
+          <div class="gallery-overlay"><span>Nguyên liệu tươi</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/chut-09.jpg" alt="Fresh cut fruits" />
+          <div class="gallery-overlay"><span>Rau củ cắt tươi</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/chut-11.jpg" alt="Detox program" />
+          <div class="gallery-overlay"><span>Liệu trình Detox</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/chut-06.jpg" alt="Service" />
+          <div class="gallery-overlay"><span>Giao hàng tận nơi</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/chut-07.jpg" alt="Ginger Shot" />
+          <div class="gallery-overlay"><span>Ginger Shot</span></div>
+        </div>
+        <div class="gallery-item">
+          <img src="images/chut-04.jpg" alt="Liệu trình nhẹ" />
+          <div class="gallery-overlay"><span>Liệu trình nhẹ nhàng</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BENEFITS ========== -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="text-center mb-5" data-aos="fade-up">
+        <h2 class="section-title">Tại sao chọn Chút?</h2>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
+          <div class="benefit-box">
+            <div class="benefit-icon"><i class="fas fa-seedling"></i></div>
+            <h5 class="fw-semibold">Nguyên liệu tươi</h5>
+            <p class="text-muted small mb-0">Rau củ quả được chọn lọc và ép trong ngày, đảm bảo độ tươi ngon cao nhất.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+          <div class="benefit-box">
+            <div class="benefit-icon"><i class="fas fa-heart"></i></div>
+            <h5 class="fw-semibold">Tốt cho sức khỏe</h5>
+            <p class="text-muted small mb-0">Không đường, không chất bảo quản, không chất tạo màu – an toàn cho mọi người.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="benefit-box">
+            <div class="benefit-icon"><i class="fas fa-bolt"></i></div>
+            <h5 class="fw-semibold">Bừng năng lượng</h5>
+            <p class="text-muted small mb-0">Vitamin & khoáng chất tự nhiên giúp cơ thể tỉnh táo, da dẻ tươi sáng.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+          <div class="benefit-box">
+            <div class="benefit-icon"><i class="fas fa-shipping-fast"></i></div>
+            <h5 class="fw-semibold">Giao nhanh</h5>
+            <p class="text-muted small mb-0">Có trên ShopeeFood & GrabFood. Hotline hỗ trợ 0978 068 449.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA ========== -->
+  <section class="cta-section section-padding">
+    <div class="container position-relative">
+      <div class="row align-items-center">
+        <div class="col-lg-7" data-aos="fade-right">
+          <h2 class="display-5 fw-bold mb-3">Sẵn sàng thanh lọc cơ thể?</h2>
+          <p class="fs-5 opacity-90 mb-4">Gọi ngay để được tư vấn liệu trình phù hợp và đặt hàng giao tận nơi tại Quy Nhơn.</p>
+          <a href="tel:0978068449" class="cta-phone text-white text-decoration-none">
+            <i class="fas fa-phone-alt me-3"></i>0978 068 449
+          </a>
+        </div>
+        <div class="col-lg-5 text-lg-end mt-4 mt-lg-0" data-aos="fade-left">
+          <a href="https://shopee.vn" target="_blank" class="btn btn-light btn-lg rounded-pill px-4 me-2 mb-2">
+            <i class="fas fa-shopping-bag me-2"></i>ShopeeFood
+          </a>
+          <a href="https://food.grab.com" target="_blank" class="btn btn-outline-light btn-lg rounded-pill px-4 mb-2">
+            <i class="fas fa-motorcycle me-2"></i>GrabFood
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section-padding" id="contact">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-5" data-aos="fade-right">
+          <span class="text-uppercase fw-semibold text-success mb-2 d-block" style="letter-spacing: 2px; font-size: 0.85rem;">Liên hệ</span>
+          <h2 class="section-title">Ghé Chút hoặc gọi ngay</h2>
+          <p class="text-muted mb-4">Chúng tôi luôn sẵn sàng tư vấn liệu trình và nhận đơn hàng mỗi ngày.</p>
+          <div class="d-flex gap-3 mb-4">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h6 class="fw-semibold mb-1">Địa chỉ</h6>
+              <p class="text-muted mb-0">143 Nguyễn Huệ, Quy Nhơn</p>
+            </div>
+          </div>
+          <div class="d-flex gap-3 mb-4">
+            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <h6 class="fw-semibold mb-1">Hotline</h6>
+              <p class="mb-0"><a href="tel:0978068449" class="text-decoration-none fw-medium text-success">0978 068 449</a></p>
+            </div>
+          </div>
+          <div class="d-flex gap-3">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h6 class="fw-semibold mb-1">Giờ hoạt động</h6>
+              <p class="text-muted mb-0">Mỗi ngày – Giao hàng tận nơi</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-7" data-aos="fade-left">
+          <div class="contact-card">
+            <h4 class="fw-bold mb-4">Gửi yêu cầu tư vấn</h4>
+            <form id="contactForm">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="Họ và tên" required />
+                </div>
+                <div class="col-md-6">
+                  <input type="tel" class="form-control" placeholder="Số điện thoại" required />
+                </div>
+                <div class="col-12">
+                  <select class="form-select">
+                    <option selected>Chọn nhu cầu</option>
+                    <option>Tư vấn liệu trình Detox</option>
+                    <option>Đặt nước ép lẻ</option>
+                    <option>Đặt theo gói ngày</option>
+                    <option>Khác</option>
+                  </select>
+                </div>
+                <div class="col-12">
+                  <textarea class="form-control" rows="4" placeholder="Lời nhắn của bạn..."></textarea>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-submit">Gửi yêu cầu <i class="fas fa-paper-plane ms-2"></i></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <h3 class="text-white font-serif mb-3">Chút<span style="color:var(--accent)">.</span></h3>
+          <p class="mb-3" style="line-height:1.7;">Chút tươi lành, chút yêu thương. Nước ép nguyên chất – Không đường – Không chất bảo quản.</p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+        <div class="col-6 col-lg-2">
+          <h5>Menu</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#home">Trang chủ</a></li>
+            <li class="mb-2"><a href="#about">Giới thiệu</a></li>
+            <li class="mb-2"><a href="#products">Sản phẩm</a></li>
+            <li class="mb-2"><a href="#detox">Liệu trình</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-lg-3">
+          <h5>Sản phẩm</h5>
+          <ul class="list-unstyled">
+            <li class="mb-2"><a href="#products">Blood Builder</a></li>
+            <li class="mb-2"><a href="#products">Ginger Shot</a></li>
+            <li class="mb-2"><a href="#products">Lựu Ép</a></li>
+            <li class="mb-2"><a href="#products">Smoothie Mix</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3">
+          <h5>Liên hệ</h5>
+          <p class="mb-2"><i class="fas fa-map-marker-alt me-2"></i>143 Nguyễn Huệ, Quy Nhơn</p>
+          <p class="mb-2"><i class="fas fa-phone me-2"></i>0978 068 449</p>
+          <p class="mb-0"><i class="fas fa-store me-2"></i>ShopeeFood · GrabFood</p>
+        </div>
+      </div>
+      <div class="footer-bottom text-center text-md-start d-md-flex justify-content-between align-items-center">
+        <p class="mb-0">© 2026 Chút Healthy Juice. All rights reserved.</p>
+        <p class="mb-0 opacity-75">Chút tươi lành – Chút yêu thương 💚</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    // AOS
+    AOS.init({ duration: 800, once: true, offset: 80 });
+
+    // Navbar scroll
+    const nav = document.getElementById('mainNav');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 60) nav.classList.add('scrolled');
+      else nav.classList.remove('scrolled');
+    });
+
+    // Particles
+    const particles = document.getElementById('particles');
+    for (let i = 0; i < 18; i++) {
+      const span = document.createElement('span');
+      span.style.left = Math.random() * 100 + '%';
+      span.style.animationDelay = Math.random() * 12 + 's';
+      span.style.animationDuration = (8 + Math.random() * 8) + 's';
+      span.style.width = span.style.height = (4 + Math.random() * 8) + 'px';
+      particles.appendChild(span);
+    }
+
+    // Active nav on scroll
+    const sections = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(sec => {
+        const top = sec.offsetTop - 120;
+        if (scrollY >= top) current = sec.getAttribute('id');
+      });
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === '#' + current) link.classList.add('active');
+      });
+    });
+
+    // Form
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Cảm ơn bạn đã gửi yêu cầu! Chút sẽ liên hệ lại sớm nhất. Hotline: 0978 068 449');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
